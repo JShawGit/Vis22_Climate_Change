@@ -1,0 +1,12 @@
+{
+  "data_types": {
+    "precip": "precip_CMAP",
+    "land":   "land_MCD12Q1",
+    "temp":   "temp_CRUTEM",
+    "co2":    "co2_GOSAT"
+  },
+  "data_locations": {
+    "preprocessed": "../data/preprocessed_data",
+    "processed": "../data/processed_data"
+  }
+}
