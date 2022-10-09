@@ -1,24 +1,17 @@
-from termcolor import colored
-from processing import *
-from graphing import *
-from reading import *
-import traceback
-import os
+from application.app import MainWindow, Application
+from data_preprocessing import parser
+from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+import sys
 
-if __name__ == "__main__":
-    """ The main program. """
 
-    # Get program configuration
-    config = parser.get_config()
+def window():
+    config = parser.get_config('../config/app_configuration.json')['window_config']
+    app = Application(sys.argv)
+    main_window = MainWindow(config)
+    app.exec_()
 
-    # Read in the data files
-    data = config['data_types'].copy()
-    for key in list(data.keys()):
-        try:
-            data[key] = read_data.read_data_files(os.path.join(config["data_locations"]["processed"], data[key]))
-        except:
-            traceback.print_exc()
-            print(colored(f"Fatal Error: Unable to read {key} data from '{data[key]}'.\n", 'red'))
-            exit(1)
 
-    exit(0)
+if __name__ == '__main__':
+    window()
