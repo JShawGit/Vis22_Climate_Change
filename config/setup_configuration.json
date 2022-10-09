@@ -1,0 +1,17 @@
+{
+  "data_types": {
+    "precip": "precip_CMAP",
+    "land":   "land_MCD12Q1",
+    "temp":   "temp_CRUTEM",
+    "co2":    "co2_GOSAT"
+  },
+  "data_locations": {
+    "preprocessed": "../data/preprocessed_data",
+    "processed_temp": "../data/temp",
+    "processed":    "../data"
+  },
+  "coordinate_ranges": {
+    "longitude": {"min": -90, "max": -30},
+    "latitude": {"min": -60, "max": 15}
+  }
+}
