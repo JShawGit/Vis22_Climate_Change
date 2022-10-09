@@ -5,6 +5,6 @@
 
 <br>
 
-##Note: 
+## Note: 
 You can use a regular Python venv, but may have trouble installing GDAL (if it's a requirement) without conda.
 Pycharm is reccommended as the IDE to code with.
