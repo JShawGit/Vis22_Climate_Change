@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ClimateUI</class>
+ <widget class="QMainWindow" name="ClimateUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1161</width>
+    <height>648</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TestApp</string>
+  </property>
+  <widget class="QWidget" name="MainWindow">
+   <property name="cursor">
+    <cursorShape>CrossCursor</cursorShape>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QMdiArea" name="mdiArea"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1161</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_Options">
+    <property name="title">
+     <string>&amp;Options</string>
+    </property>
+    <widget class="QMenu" name="menuChange_Data">
+     <property name="title">
+      <string>Change Data</string>
+     </property>
+     <addaction name="actionPrecipitation"/>
+     <addaction name="actionTemperature"/>
+    </widget>
+    <widget class="QMenu" name="menuNew_View">
+     <property name="title">
+      <string>New View</string>
+     </property>
+     <addaction name="actionMap"/>
+     <addaction name="actionLine_Graph"/>
+    </widget>
+    <addaction name="menuChange_Data"/>
+    <addaction name="separator"/>
+    <addaction name="menuNew_View"/>
+   </widget>
+   <addaction name="menu_Options"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="ColorOptions">
+   <property name="windowTitle">
+    <string>Color Options</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="title">
+        <string/>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QWidget" name="widget" native="true"/>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="FilterOptions">
+   <property name="windowTitle">
+    <string>Filtering Options</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="title">
+        <string/>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QWidget" name="widget_2" native="true"/>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionPrecipitation">
+   <property name="text">
+    <string>Precipitation</string>
+   </property>
+  </action>
+  <action name="actionTemperature">
+   <property name="text">
+    <string>Temperature</string>
+   </property>
+  </action>
+  <action name="actionMap">
+   <property name="text">
+    <string>Map</string>
+   </property>
+  </action>
+  <action name="actionLine_Graph">
+   <property name="text">
+    <string>Line Graph</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
